@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+@import "/styles/normalize.css";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Color palette */
+:root {
+  --color-bg: hsl(185, 75%, 39%);
+  --color-user-name: hsl(229, 23%, 23%);
+  --color-age: hsl(227, 10%, 46%);
+  --color-title: hsl(0, 0%, 59%);
+}
+
+/* Typography */
+body {
+  display: grid;
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  place-content: center;
+  background-image: url(/images/bg-pattern-top.svg),
+    url(/images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 85rem;
+  background-position: -75rem -41rem, 12rem 22rem;
+}
+
+.user__name,
+.user__stats {
+  color: var(--color-user-name);
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 450px) {
+  body {
+    background-position: -19rem -44rem, 61rem 36rem;
+  }
+}
+
+/* Profile card */
+.user-profile {
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  overflow: hidden;
+  width: 315px;
+  height: 375px;
+  box-shadow: 8px 30px 110px -20px black;
+}
+
+.user__cover-image {
+  width: 100%;
+}
+
+.user__image {
+  width: 110px;
+  border-radius: 100px;
+  border: 5px solid white;
+}
+
+.user__detail {
+  margin: 2rem 0;
+  padding-bottom: 1rem;
+  width: 100%;
+  transform: translateY(-5rem);
+  border-bottom: 1px solid var(--color-title);
+  text-align: center;
+}
+
+.user__image {
+  transform: translateY(-5rem);
+}
+
+.user__age {
+  margin-left: 1rem;
+  font-size: 2rem;
+  color: var(--color-age);
+}
+
+.user__location {
+  font-size: 1.5rem;
+  color: var(--color-title);
+  margin: 1.4rem;
+}
+
+.user__stats {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  transform: translateY(-5rem);
+  margin: 0;
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.stats__item i {
+  font-size: 1rem;
+  color: var(--color-title);
+  font-style: normal;
+  letter-spacing: 0.2ch;
+}
