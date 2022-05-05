@@ -24,7 +24,7 @@ body {
   display: grid;
   font-family: "Kumbh Sans", sans-serif;
   background-color: var(--color-bg);
-  min-height: 100vh;
+  min-height: 100%;
   place-content: center;
   background-image: url(/images/bg-pattern-top.svg),
     url(/images/bg-pattern-bottom.svg);
